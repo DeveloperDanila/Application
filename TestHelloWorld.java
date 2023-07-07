@@ -3,8 +3,6 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
-import java.util.function.Consumer;
-
 
 /**
     Are you crazy? You are going to test HelloWorld with one switch!
@@ -56,19 +54,4 @@ public class TestHelloWorld {
         return sb.toString();
     }
 
-    private static class StreamProcessor implements Runnable {
-        private InputStream inputStream;
-        private Consumer<String> consumer;
-
-        public StreamProcessor(InputStream inputStream, Consumer<String> consumer) {
-            this.inputStream = inputStream;
-            this.consumer = consumer;
-        }
-
-        @Override
-        public void run() {
-            new BufferedReader(new InputStreamReader(inputStream)).lines()
-                    .forEach(consumer);
-        }
-    }
 }
