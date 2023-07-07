@@ -1,7 +1,7 @@
 import java.util.Locale;
 
 /**
- * Prints Hello World depens on locale
+ * Prints Hello World depends on locale
  * GoogleHelp:
  * @link <a href = ttps://howtodoinjava.com/java/date-time/how-to-get-current-user-locale-in-java/></a>
  */
