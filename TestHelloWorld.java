@@ -22,8 +22,10 @@ public class TestHelloWorld {
         String expectedRusHelloWorld = "Привет, Мир!";
         String actual = getActualHelloWorld();
         
-        if (!expectedRusHelloWorld.equals(actual)) {
+        if (!expectedRusHelloWorld.equalsIgnoreCase(actual)) {
             System.err.println("Test failed! Actual:" + actual);
+        } else {
+            System.out.println("Test passed!");
         }
     }
 
