@@ -1,2 +1,2 @@
 # Application
-Optional descriptiion of Application
+Optional description of Application
