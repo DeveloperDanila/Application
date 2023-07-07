@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 
 
 /**
-    You are crazy? You are going to test HelloWorld with one switch!
+    Are you crazy? You are going to test HelloWorld with one switch!
    @see <a href="https://www.baeldung.com/run-shell-command-in-java></a>
    @link <a href = "https://www.baeldung.com/javadoc-linking-external-url></a>
    @link <a href = "https://www.baeldung.com/java-executor-service-tutorial"</a>
@@ -23,7 +23,7 @@ public class TestHelloWorld {
         String actual = getActualHelloWorld();
         
         if (!expectedRusHelloWorld.equalsIgnoreCase(actual)) {
-            System.err.println("Test failed! Actual:" + actual);
+            System.err.println("Test failed! Actual: " + actual);
         } else {
             System.out.println("Test passed!");
         }
