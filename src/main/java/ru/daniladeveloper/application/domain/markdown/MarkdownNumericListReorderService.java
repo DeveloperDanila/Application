@@ -1,32 +1,28 @@
 package ru.daniladeveloper.application.domain.markdown;
 
+import org.springframework.stereotype.Service;
+
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class MarkdownNumericListReorder {
+@Service
+public class MarkdownNumericListReorderService {
 
 
-    public MarkdownNumericListReorder() {
-    }
-
-    /*
-    public static void main(String[] args) {
-
-        String input = """
-                1. some first
-                3. some third
-                2. some second
-                """;
-        MarkdownNumericListReorder helper = new MarkdownNumericListReorder();
-        String result = helper.makeComplexReorder(input);
-        System.out.println(result);
-    }*/
-
-    private String makeComplexReorder(String input) {
+    public String makeReorderByArticle(String input) {
         var doc = prepareDocument(input);
         List<Article> articles = doc.getContent().stream()
                 .map(this::getOrderedArticle).collect(Collectors.toList());
         return new MarkdownDocument(articles).toString();
+    }
+
+    public String makeWholeReorder(String input) {
+        return Arrays.stream(input.split("\n"))
+                .filter(this::startsWithNumber)
+                .filter(this::isHasDot)
+                .sorted(this::linesCompare)
+                .reduce(((s, s2) -> s + "\n" + s2))
+                .orElse("ERROR!");
     }
 
     private Article getOrderedArticle(Article disorderedArticle) {
@@ -51,14 +47,7 @@ public class MarkdownNumericListReorder {
     }
 
 
-    private String makeReorder(String input) {
-        return Arrays.stream(input.split("\n"))
-                .filter(this::startsWithNumber)
-                .filter(this::isHasDot)
-                .sorted(this::linesCompare)
-                .reduce(((s, s2) -> s + "\n" + s2))
-                .orElse("ERROR!");
-    }
+
 
     private MarkdownDocument prepareDocument(String input) {
         Article article = new Article();

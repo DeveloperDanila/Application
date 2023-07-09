@@ -1,4 +1,4 @@
-package ru.daniladeveloper.application.api;
+package ru.daniladeveloper.application.api.greeting;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -7,7 +7,6 @@ import ru.daniladeveloper.application.app.HelloApplicationService;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/v1/get/hello")
-
 public class GetHelloController {
 
     private final HelloApplicationService helloService;

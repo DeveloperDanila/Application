@@ -1,6 +1,5 @@
 package ru.daniladeveloper.application.domain.markdown;
 
-
 public class TextLine {
     private String value;
     private boolean isContent;
@@ -41,11 +40,9 @@ public class TextLine {
      * @return is line has structure {number}.{.*}
      */
     public boolean isOrderedListItem() {
-        boolean wasDot = false;
         boolean wasDigit = false;
         for (int i = 0; i < value.length(); i++) {
             if (value.charAt(i) == '.') {
-                wasDot = true;
                 return wasDigit;
             } else if (Character.isDigit(value.charAt(i))) {
                 wasDigit = true;

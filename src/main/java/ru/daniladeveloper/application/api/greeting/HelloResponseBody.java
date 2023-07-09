@@ -1,4 +1,4 @@
-package ru.daniladeveloper.application.api;
+package ru.daniladeveloper.application.api.greeting;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
