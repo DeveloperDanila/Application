@@ -1,3 +1,5 @@
+package ru.daniladeveloper.application.domain.markdown;
+
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -7,19 +9,7 @@ public class MarkdownNumericListReorder {
     public MarkdownNumericListReorder() {
     }
 
-    /***
-     * String input = """
-     *                 1. some first
-     *                 3. some third
-     *                 2. some second
-     *                 """;
-     *  String output = """
-     *                 1. some first
-     *                 2. some second
-     *                 3. some third
-     *                 """;
-     * @param args
-     */
+    /*
     public static void main(String[] args) {
 
         String input = """
@@ -30,7 +20,7 @@ public class MarkdownNumericListReorder {
         MarkdownNumericListReorder helper = new MarkdownNumericListReorder();
         String result = helper.makeComplexReorder(input);
         System.out.println(result);
-    }
+    }*/
 
     private String makeComplexReorder(String input) {
         var doc = prepareDocument(input);

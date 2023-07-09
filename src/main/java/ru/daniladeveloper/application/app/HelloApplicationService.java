@@ -3,7 +3,7 @@ package ru.daniladeveloper.application.app;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import ru.daniladeveloper.application.domain.HelloService;
+import ru.daniladeveloper.application.domain.greeting.HelloService;
 
 @Service
 @RequiredArgsConstructor

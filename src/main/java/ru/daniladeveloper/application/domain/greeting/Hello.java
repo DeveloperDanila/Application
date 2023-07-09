@@ -1,4 +1,4 @@
-package ru.daniladeveloper.application.domain;
+package ru.daniladeveloper.application.domain.greeting;
 
 import lombok.Builder;
 

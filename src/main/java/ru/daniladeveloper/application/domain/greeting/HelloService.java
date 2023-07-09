@@ -1,7 +1,6 @@
-package ru.daniladeveloper.application.domain;
+package ru.daniladeveloper.application.domain.greeting;
 
 import org.springframework.stereotype.Service;
-import ru.daniladeveloper.application.api.HelloResponseBody;
 
 @Service
 public class HelloService {

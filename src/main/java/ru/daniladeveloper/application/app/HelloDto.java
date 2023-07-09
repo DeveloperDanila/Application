@@ -2,7 +2,7 @@ package ru.daniladeveloper.application.app;
 
 import lombok.Builder;
 import lombok.Getter;
-import ru.daniladeveloper.application.domain.Hello;
+import ru.daniladeveloper.application.domain.greeting.Hello;
 
 @Builder
 @Getter
