@@ -9,7 +9,12 @@ out/
 gradlew
 gradlew.bat
 .gradle
-gradle/*
+gradle
+
+frontend/node_modules
+
+frontend/package-lock.json
+
 
 # Log file
 *.log
