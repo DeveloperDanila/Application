@@ -5,5 +5,5 @@ import lombok.Data;
 @Data
 public class MarkdownRequestBody {
 
-    String content;
+    private String content;
 }

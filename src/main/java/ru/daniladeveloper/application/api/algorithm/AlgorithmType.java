@@ -4,5 +4,6 @@ public enum AlgorithmType {
 
     SEARCH,
     SORT,
+    GENERAL,
     TRAVERSE
 }
