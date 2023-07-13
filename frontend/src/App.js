@@ -10,7 +10,7 @@ const App = () => {
   useEffect(() => {
     setLoading(true);
 
-    fetch('/visualize/algorithm/')
+    fetch('/api/v1/get/hello/multiple')
       .then(response => response.json())
       .then(data => {
         setGroups(data);
@@ -27,10 +27,10 @@ const App = () => {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <div className="App-intro">
-          <h2>Algorithms List</h2>
+          <h2>Hello's List</h2>
           {groups.map(group =>
             <div key={group.id}>
-              {group.name}
+              {group.value}
             </div>
             )}
         </div>
