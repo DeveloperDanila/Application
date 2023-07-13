@@ -3,7 +3,7 @@ services:
   postgres:
     image: postgres:15.3
     # volumes:
-    #   - ~/volumes/jhipster/JHipster/postgresql/:/var/lib/postgresql/data/
+    #   - ~/volumes/postgresql/:/var/lib/postgresql/data/
     environment:
       POSTGRES_DB: AppDB
       POSTGRES_USER: postgres
