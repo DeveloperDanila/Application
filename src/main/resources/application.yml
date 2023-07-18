@@ -4,12 +4,11 @@ server:
 spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:postgresql://localhost:5432/AppDB
+    url: jdbc:postgresql://localhost:5432/TrashMarket
     username: postgres
-    password: 1
+    password: 777
   liquibase:
     change-log: liquibase/master.xml
-
-translator:
-    api:
-      key:
+hibernate:
+  jdbc:
+    use_streams_for_binary: false

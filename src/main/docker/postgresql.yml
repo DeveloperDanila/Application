@@ -1,13 +1,13 @@
-name: database
+name: trash-market-database
 services:
   postgres:
     image: postgres:15.3
-    # volumes:
-    #   - ~/volumes/postgresql/:/var/lib/postgresql/data/
+    volumes:
+       - ~/volumes/postgresql/trash/:/var/lib/postgresql/data/
     environment:
-      POSTGRES_DB: AppDB
+      POSTGRES_DB: TrashMarket
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: 1
+      POSTGRES_PASSWORD: 777
       POSTGRES_HOST_AUTH_METHOD: trust
     healthcheck:
       test: ['CMD-SHELL', 'pg_isready -U $${POSTGRES_USER}']
